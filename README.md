@@ -30,7 +30,11 @@
 <br>
 <hr>
 <br>
-<br>
+
+### 서비스 ERD
+![hospi_ERD](https://user-images.githubusercontent.com/68843162/154679697-609ea18b-a363-4ecc-9f5a-444c36953098.png)
+
+
 
 ### API
 
