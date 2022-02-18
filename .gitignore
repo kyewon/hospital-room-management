@@ -127,7 +127,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# sam build file
+# serverless build file
 .aws-sam/
 .build/
 .serverless/

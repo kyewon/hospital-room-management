@@ -1,6 +1,6 @@
 # hospital-room-management
 [DEMO] Tool server for managing hospital room &amp; Use serverless on aws lambda
-
+<hr>
 ## 병실 재고 관리 서버 (TOY)
 
 ### 🗂 프로젝트 소개
@@ -27,15 +27,13 @@
 - aws aurora mysql (v5.7)
 
 <br>
-<br>
 <hr>
-<br>
 
 ### 서비스 ERD
 ![hospi_ERD](https://user-images.githubusercontent.com/68843162/154679697-609ea18b-a363-4ecc-9f5a-444c36953098.png)
 
-
-
+<br>
+<hr>
 ### API
 
 | path       | type |  설명           |

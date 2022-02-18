@@ -1,0 +1,43 @@
+app: hospital-room-management
+service: hospital-room-management
+
+provider:
+  name: aws
+  region: ap-northeast-2
+  runtime: nodejs14.x
+  stage: ${env:NODE_ENV}
+  memorySize: 512
+  timeout: 10
+  vpc:
+    securityGroupIds:
+      ${env:sg}
+    subnetIds:
+      - ${env:subnet01}
+      - ${env:subnet02}
+  tracing:
+    lambda: true
+
+custom:
+  dotenv:
+    path: .env
+
+plugins:
+  - serverless-plugin-typescript 
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+package:
+  # exclude:
+  include:
+    - ormconfig.ts
+
+functions:
+  proxyRoute:
+    handler: app/index.route
+    tracing: PassThrough
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
+          # authorizer: aws_iam
+          cors: true
